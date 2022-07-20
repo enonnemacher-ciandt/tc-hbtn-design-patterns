@@ -9,7 +9,11 @@ public class CalculadorSalarioService {
     }
 
     public static CalculadorSalarioService getCalculadorSalarioService() {
-        return (instancia == null) ? instancia = new CalculadorSalarioService() : instancia;
+        if(instancia == null) {
+            return instancia = new CalculadorSalarioService();
+        }
+        
+        return instancia;
     }
 
     public double calcularSalarioLiquido(double salarioBruto, double valorDescontos, double valorVendas, double percentualComissao) {
