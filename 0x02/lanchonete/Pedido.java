@@ -17,12 +17,12 @@ public class Pedido {
     public String toString() {
         String pedido = "\tFora da Caixa:\n";
         for (ItemPedido itemPedido : itensForaCaixa) {
-            pedido += (String.format("\t\t- %s %s \n", itemPedido.getTipo(), itemPedido.getNome()));
+            pedido += (String.format("\t\t- %s %s\n", itemPedido.getTipo(), itemPedido.getNome()));
         }
 
         pedido += "\tDentro da Caixa:\n";
         for (ItemPedido itemPedido : itensDentroCaixa) {
-            pedido += (String.format("\t\t- %s %s \n", itemPedido.getTipo(), itemPedido.getNome()));
+            pedido += (String.format("\t\t- %s %s\n", itemPedido.getTipo(), itemPedido.getNome()));
         }
 
         return pedido;
